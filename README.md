@@ -35,17 +35,23 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What does bcrypt do to help us store passwords in a secure manner.
 
+  bcrypt is an algorithm that hashes the password (or any info) multiple times.
 
 
 1. What does bcrypt do to slow down attackers?
-
+  
+  Brute-Force Attack Mitigation:
+  It makes it difficult to crack a password hash.  The attacker
+  would have to try brut forcing the number of times the password
+  was hashed.  This can take a while and be costly in terms on 
+  computing power and electricity used to crack the hash.
 
 
 1. What are the three parts of the JSON Web Token?
 
-  (1) Header
-  (2) Payload
-  (3) Signature
+  1. Header
+  2. Payload
+  3. Signature
 
 ## Project Set Up
 
@@ -72,14 +78,14 @@ Helpful Tip on Testing this Project:
 
 ## Minimum Viable Product
 
-- [ ] Implement the `register` function inside `/config/routes.js`.
-- [ ] Implement the `login` function inside `/config/routes.js`.
-- [ ] Use JSON Web Tokens for authentication.
-- [ ] Add at least 2 tests for the API endpoints.
+- [x] Implement the `register` function inside `/config/routes.js`.
+- [x] Implement the `login` function inside `/config/routes.js`.
+- [x] Use JSON Web Tokens for authentication.
+- [x] Add at least 2 tests for the API endpoints.
 
 **Note** The migrations and a database with empty users is already included
 
-- [ ] Add the authentication related code. If everything is done correctly, visiting `/api/jokes` should return a list of jokes.
+- [x] Add the authentication related code. If everything is done correctly, visiting `/api/jokes` should return a list of jokes.
 
 ## Stretch Problem: Build a front end to interface with your User Auth System
 
