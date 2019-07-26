@@ -34,7 +34,6 @@ function login(req, res) {
       if (user && bcrypt.compareSync(password, user.password)) {
         // produce a token
         const token = generateToken(user);
-
         res.status(200).json({
           message: `Welcome ${user.username}!`,
           token,
@@ -50,7 +49,6 @@ function login(req, res) {
 
 function getJokes(req, res) {
   const token = req.headers.authorization;
-  console.log('tst')
   const requestOptions = {
     headers: { accept: 'application/json' },
   };
